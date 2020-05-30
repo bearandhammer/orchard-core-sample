@@ -1,0 +1,20 @@
+﻿@using JeffSum.Module.ViewModels;
+@model JeffIpsumViewModel
+@{
+    ViewData["Title"] = "Jeff Ipsum";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/JeffSum.Module/css/jeff-index.css" />
+}
+@section Scripts {
+    <script type="text/javascript" src="~/JeffSum.Module/js/jeff-index.js"></script>
+}
+<div>
+    <!--Header and text content-->
+    <h2 class="mb-4">Jeff Goldblum Ipsum Content</h2>
+    <p>If you're looking for a little bit of Jeff then you've come to the right place. You can find five paragraphs of Jeff Goldblum goodness below.</p>
+    <p>The data has been sourced using a NuGet package from the <a href="https://github.com/jamesmontemagno/Jeffsum.NET" target="_blank">Jeffsum.NET</a> project (inspired by the wonderful <a href="http://jeffsum.com/" target="_blank">jeffsum.com</a>).</p>
+    <!--Text area content/copy button-->
+    <textarea id="JeffIpsumContentTextArea" class="form-control mb-2" rows="20">@Model.JeffString</textarea>
+    <button id="CopyToClipboardButton" class="float-right btn btn-primary module-button">Copy to Clipboard</button>
+</div>

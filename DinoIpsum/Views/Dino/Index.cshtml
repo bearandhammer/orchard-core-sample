@@ -1,0 +1,46 @@
+﻿@using DinoIpsum.Module.ViewModels;
+@model DinoIpsumViewModel
+@{
+    ViewData["Title"] = "Dino Ipsum";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/DinoIpsum.Module/css/dino-index.css" />
+}
+<div>
+    <!--Header and text content-->
+    <h2 class="mb-4">Dino Ipsum Content</h2>
+    <p>Last but not least, here is some lovely dinosaur-based Lorem Ipsum generated content.</p>
+    <p>The data has been sourced using the <a href="https://dinoipsum.herokuapp.com/" target="_blank">Dino Ipsum</a> API.</p>
+    <!--Example carousel for Dino Lorem Ipsum content-->
+    <div id="DinoCarouselIndicators" class="carousel slide" data-ride="carousel">
+        <!--Carousel navigation indicators-->
+        <ol class="carousel-indicators">
+            @for (int i = 0; i < @Model.DinoParagraphs.Count; i++)
+            {
+                <li data-target="#DinoCarouselIndicators" data-slide-to="@i" class="@(i == 0 ? "active" : string.Empty)"></li>
+            }
+        </ol>
+        <!--Carousel internal content-->
+        <div class="carousel-inner">
+            @for (int i = 0; i < @Model.DinoParagraphs.Count; i++)
+            {
+                <div class="carousel-item @(i == 0 ? "active" : string.Empty)">
+                    <div class="carousel-text">
+                        <p>
+                            @Model.DinoParagraphs[i]
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+        <!--Carousel next and previous button controls-->
+        <a class="carousel-control-prev" href="#DinoCarouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#DinoCarouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

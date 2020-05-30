@@ -1,2 +1,2 @@
 # orchard-core-sample
-A sample application that illustrates how to create a modular application with Orchard Core.
+The 'ipsum-generator-web' application iillustrates test implementation, for blogging purposes, of a modular <a href="https://github.com/OrchardCMS/Orchardcore" rel="noopener" target="_blank">Orchard Core</a> application that exposes various 'ipsum' generators. This particular sample is related to the framework aspects of Orchard Core only.

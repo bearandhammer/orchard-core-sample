@@ -1,0 +1,4 @@
+﻿/* Override styles for the 'JeffSum.Module' Orchard Module - contains a consistent style for module buttons (for illustration only) */
+.module-button {
+    min-width: 200px;
+}

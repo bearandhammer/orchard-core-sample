@@ -1,0 +1,4 @@
+﻿/* Override styles for the 'HipsterIpsum.Module' Orchard Module - focuses just on card styling (for illustration only) */
+.card {
+    min-height: 550px;
+}
